@@ -40,6 +40,14 @@ public abstract class Device {
     // Phuong thuc truu tuong tinh chi phi bao tri
     public abstract double chiPhiBaoTri();
 
+    // Lay gia mua va nam su dung de lop con tinh phi bao tri
+    public double getGiaMua() {
+        return giaMua;
+    }
+    public int getNamSuDung() {
+        return namSuDung;
+    }
+
     @Override
     public String toString() {
         return String.format("[%s] %s | Nam SD: %d | Gia: %,.0f VND | Trang thai: %s",
