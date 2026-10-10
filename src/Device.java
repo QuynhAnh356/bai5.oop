@@ -26,7 +26,7 @@ public abstract class Device {
         }
 
         int namHienTai = Year.now().getValue();
-        if (namSuDung > namHienTai) {
+        if (namSuDung <= 0 || namSuDung > namHienTai) {
             throw new IllegalArgumentException("Nam su dung khong hop le!");
         }
 

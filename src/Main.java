@@ -125,6 +125,8 @@ public class Main {
         dsMang.add(pr2);
         for (INetworkable tb : dsMang) {
             System.out.println("IP: " + tb.getIpAddress() + " | Ket noi: " + tb.isConnected());
+            tb.disconnect();
+            System.out.println("Sau khi ngat: IP = " + tb.getIpAddress() + " | Ket noi: " + tb.isConnected());
         }
     }
 }
