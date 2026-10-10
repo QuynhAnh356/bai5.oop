@@ -48,6 +48,14 @@ public abstract class Device {
         return namSuDung;
     }
 
+    // lay ma va trang thai de lam phan 5
+    public String getMaThietBi() {
+        return maThietBi;
+    }
+    public DeviceStatus getTrangThai() {
+        return trangThai;
+    }
+
     @Override
     public String toString() {
         return String.format("[%s] %s | Nam SD: %d | Gia: %,.0f VND | Trang thai: %s",
