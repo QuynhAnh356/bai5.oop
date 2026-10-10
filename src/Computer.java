@@ -1,4 +1,5 @@
-
+// Ma sinh vien: 202418841
+// Ho ten: Duong Thi Quynh Anh
 import java.time.Year;
 
 public class Computer extends Device implements INetworkable{

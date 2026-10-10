@@ -1,4 +1,5 @@
-
+// Ma sinh vien: 202418841
+// Ho ten: Duong Thi Quynh Anh
 
 public class Projector extends Device {
     private int doSang;                 // Do sang (lumen)

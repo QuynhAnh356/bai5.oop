@@ -1,3 +1,5 @@
+// Ma sinh vien: 202418841
+// Ho ten: Duong Thi Quynh Anh
 public class NetworkPrinter extends Printer implements INetworkable {
     private String ipAddress;
     private boolean isConnected;

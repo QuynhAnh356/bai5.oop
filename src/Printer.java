@@ -1,4 +1,5 @@
-
+// Ma sinh vien: 202418841
+// Ho ten: Duong Thi Quynh Anh
 public class Printer extends Device {
     private String loaiMayIn;       // Laser hoac Phun
     private int soTrangDaIn;        // So trang da in

@@ -1,7 +1,5 @@
-/******************
- Ma sinh vien: [Dien ma SV]
- Ho ten: [Dien ho ten]
- ******************/
+// Ma sinh vien: 202418841
+// Ho ten: Duong Thi Quynh Anh
 
 import java.util.ArrayList;
 import java.util.List;
