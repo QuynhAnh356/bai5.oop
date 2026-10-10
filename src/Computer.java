@@ -1,11 +1,14 @@
 
 import java.time.Year;
 
-public class Computer extends Device{
+public class Computer extends Device implements INetworkable{
     private int ram;            // Dung luong RAM (GB)
     private String cpu;         // Loai bo xu ly
     private boolean coGpuRoi;   // Co GPU roi hay khong
 
+    // them thuoc tinh cua interface
+    private String ipAddress;       // Dia chi IP hien tai
+    private boolean isConnected;    // Trang thai ket noi
 
     public Computer(String maThietBi, String tenThietBi, int namSuDung, double giaMua,
                     DeviceStatus trangThai, int ram, String cpu, boolean coGpuRoi) {
@@ -41,6 +44,39 @@ public class Computer extends Device{
         }
 
         return chiPhi;
+    }
+
+    // them phuong thuc cua interface
+    @Override
+    public String getIpAddress() {
+        return ipAddress;
+    }
+
+    @Override
+    public boolean isConnected() {
+        return isConnected;
+    }
+
+    @Override
+    public void connect(String ipAddress) {
+        // 1. Dia chi IP khong duoc rong
+        if (ipAddress == null || ipAddress.trim().isEmpty()) {
+            throw new IllegalArgumentException("Dia chi IP khong duoc de trong!");
+        }
+        // 2. Khong cho phep ket noi lai khi thiet bi dang ket noi
+        if (this.isConnected) {
+            throw new IllegalStateException("Thiet bi da duoc ket noi mang truoc do! Hay ngat ket noi truoc.");
+        }
+
+        this.ipAddress = ipAddress.trim();
+        this.isConnected = true;
+    }
+
+    @Override
+    public void disconnect() {
+        // Sau khi ngat ket noi, isConnected ve false va khong con dia chi IP
+        this.isConnected = false;
+        this.ipAddress = null;
     }
 
     @Override
